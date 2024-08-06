@@ -3,71 +3,67 @@
   padding: 0;
 }
 
-.container {
+body {
+  background-color: #000000;
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  background-color: black;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-.item {
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container {
+  display: grid;
+  grid-template-columns: 150px 150px 120px 120px 150px;
+  grid-template-rows: 100px 75px 75px 100px;
+  grid-template-areas:
+    "item1 item2 item2 item3 item3"
+    "item1 item4 item5 item5 item6"
+    "item7 item4 item5 item5 item6"
+    "item7 item8 item8 item9 item6";
+  grid-gap: 10px;
 }
 
 .item1 {
-  flex: 1 1 20%;
-  height: 200px;
-  background-color: #ff9999;
+  background-color: #ff6f61;
+  grid-area: item1;
 }
 
 .item2 {
-  flex: 1 1 30%;
-  height: 100px;
-  background-color: #99ff99;
+  background-color: #d1f1ff;
+  grid-area: item2;
 }
 
 .item3 {
-  flex: 1 1 40%;
-  height: 100px;
-  background-color: #9999ff;
+  background-color: #94d2bd;
+  grid-area: item3;
 }
 
 .item4 {
-  flex: 1 1 20%;
-  height: 200px;
-  background-color: #ffff99;
+  background-color: #ffd166;
+  grid-area: item4;
 }
 
 .item5 {
-  flex: 1 1 40%;
-  height: 100px;
-  background-color: #cc99ff;
+  background-color: #ffafcc;
+  grid-area: item5;
 }
 
 .item6 {
-  flex: 1 1 30%;
-  height: 100px;
-  background-color: #ffcc99;
+  background-color: #caffbf;
+  grid-area: item6;
 }
 
 .item7 {
-  flex: 1 1 30%;
-  height: 100px;
-  background-color: #d6a471;
+  background-color: #bdb2ff;
+  grid-area: item7;
 }
 
 .item8 {
-  flex: 1 1 40%;
-  height: 100px;
-  background-color: #ffcc99;
+  background-color: #ffc6ff;
+  grid-area: item8;
 }
 
 .item9 {
-  flex: 1 1 20%;
-  height: 200px;
-  background-color: #e6e69b;
+  background-color: #9bf6ff;
+  grid-area: item9;
 }
